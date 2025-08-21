@@ -1,0 +1,164 @@
+<script src="http://crios2020.github.io/js/util.js"></script>
+<script>
+    print("-- Clase 03 - Operadores --")
+
+    print("- Operador de Asignación  = ")
+    nro1 = 5                            //variable
+    nro2 = 7
+    print("nro1: " + nro1)        //5
+    print("nro2: " + nro2)        //7
+
+    nro1 = nro2
+    // <----
+
+    print("nro1: " + nro1)        //7
+    print("nro2: " + nro2)        //7
+
+    print("- Operadores Incrementales")
+    print("- Sumar 1 a nro1 ++")
+    nro1++                          //nro1=nro1+1
+    print("nro1: " + nro1)          //8
+
+    print("- Restar 1 a nro1 --")
+    nro1--                          //nro1=nro1-1
+    print("nro1: " + nro1)          //7
+
+    print("- Sumar x a nro1 +=")
+    nro1+=5                         //nro1=nro1+5
+    print("nro1: " + nro1)          //12
+
+    print("- Restar x a nro1 -=")
+    nro1-=5                         //nro1=nro1-5
+    print("nro1: " + nro1)          //7
+
+    print("- Multiplicar a nro1  *=")
+    nro1*=5                         //nro1=nro1*5
+    print("nro1: " + nro1)          //35
+
+    print("- Dividir nro1   /=")
+    nro1/=5                         //nro1=nro1/5
+    print("nro1: " + nro1)          //7
+
+    print("- Precedencia y procedencia de operadores ++ --")
+    print("nro1: " + nro1)          //7
+    print("nro1: " + nro1++)        //Memoria: 8  - Imprime 7
+    print("nro1: " + nro1)          //8
+    print("nro1: " + ++nro1)        //9
+
+    print("- Uso de constantes")
+    const PI=3.14159
+    //Una constante, pertenece a un tipo de datos primitico, como las variables.
+    //Una constante solo puede tener una asignación de valor, en el momento de la declaración.
+    //Una constante NO PUEDE CAMBIAR DE VALOR.
+    //Una variable puede cambiar de valor infinitas veces.
+
+    //PI++    //Error no se puede cambiar de valor a una CTE
+
+    //const, es la palabra clave para declarar una CTE
+    // en java u otros lenguajes se usa la palabra clave final
+    //Como buena práctica el identificador de CTE va en máyusculas
+    //El identificador de variable va en mínusculas
+    print(PI)
+
+    print("Operadores Relacionales Lógicos")
+    /*
+            ==          equals (Comparación)
+            !=          not equals (Distinto)
+            < <= >= >   comparación númerica
+            !           not (no)
+    */
+
+    log1=true
+    log2=false
+    nro1 = 5                            
+    nro2 = 7
+    nombre1="Jose"
+    nombre2="jOSE"
+
+    print("- Operador de comparación ==")
+    print(nro1==nro2)                   //false
+    print(nro1==5)                      //true
+    print(nro1==nro2-2)                 //true
+    print(log1==log2)                   //false
+    print(log1==true)                   //true
+    print(nombre1=="Jose")              //true
+    print(nombre1=="jose")              //false
+    print(nombre1==nombre2)             //false
+    
+    print(nombre1.toLowerCase())        //jose
+    print(nombre1.toUpperCase())        //JOSE
+    print(nombre1.toLowerCase()==nombre2.toLowerCase())     //true
+
+    print("- Operador != (distinto)")
+    print(nro1!=nro2)                   //true
+    print(nro1!=5)                      //false
+    print(log1!=log2)                   //true
+    print(nombre1!=nombre2)             //true
+    print(nombre1.toLowerCase()!=nombre2.toLowerCase()) //false
+
+    print("- Operadores < <= >= >")
+    print(nro1<=nro2)                   //true
+    print(nro1+2<=nro2)                 //true
+    print(nro1+2<nro2)                  //false
+    print(nro1>=nro2)                   //false
+    print(nro1+3>nro2)                  //true
+
+    print("- Comparación de nombre")
+    nombre1="jose"
+    nombre2="carlos"
+    nombre3="ana"
+    nombre4="beatriz"
+    nombre5="Jose"
+
+    print(nombre1>nombre2)              //true
+    print(nombre3>nombre2)              //false
+    print(nombre4<nombre2)              //true
+    print(nombre4<nombre3)              //false
+    print(nombre5>nombre2)              //false
+    print(nombre5.toLowerCase()>nombre2.toLowerCase())  //true
+
+    print("- Operador ! not")
+    print(log1)                         //true
+    print(!log1)                        //false
+    print(!!log1)                       //true
+    print(!!!log1)                      //false
+    print(!!!!log1)                     //true
+
+    //TODO Tabla de Verdad
+
+    //TODO Operadores Lógicos && ||
+
+    /*
+    Operadores de lógica
+
+        &&          and             (& shift 6)
+        ||          or              (| altgr 1)
+    
+    Tabla de verdad
+
+        X       Y      OR      AND
+        F       F       F       F
+        F       V       V       F
+        V       F       V       F
+        V       V       V       V
+
+    */
+
+    print("-- Lógica y Tablas de Verdad --")
+    print(getLlueve())
+
+    print("-- Salir al parque!! --")
+    print("- Salimos al parque si no llueve y hace calor!")
+    llueve=getLlueve()              //false
+    temperatura=getTemperatura()    //13
+    print("Llueve: "+llueve) 
+    print("Temperatura: "+temperatura)
+
+    print("Salimos:"+(!llueve && temperatura>16))
+
+    //TODO otro Ejemplo and or
+
+    //TODO Operadores Binarios & |
+
+    print("-- Fin del programa --")
+</script>

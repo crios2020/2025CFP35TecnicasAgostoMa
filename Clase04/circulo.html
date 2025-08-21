@@ -1,0 +1,19 @@
+<script src="http://crios2020.github.io/js/util.js"></script>
+<script>
+/*
+Trabajo 3
+-- Crear el  archivo circulo.html
+-- el usuario debe ingresar (prompt) 1 valor correspóndientes a 
+-- al radio del circulo
+-- calcular e imprimir (print) el perímetro del circulo
+-- calcular e imprimir (print) el área (superficie) del circulo
+*/
+
+radio=parseInt(input("Ingrese el radio de un circulo"))
+perimetro=Math.PI*radio*2
+//superficie=Math.PI*radio*radio
+superficie=Math.PI*Math.pow(radio, 2)
+print("Perímetro: "+perimetro.toFixed(2))
+print("Superficie: "+superficie.toFixed(2))
+
+</script>

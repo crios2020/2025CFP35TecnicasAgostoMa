@@ -1,0 +1,19 @@
+<script src="http://crios2020.github.io/js/util.js"></script>
+<script>
+/*
+Trabajo 2
+-- Crear el  archivo triangulo.html
+-- el usuario debe ingresar (prompt) 2 valores correspóndientes a 
+-- el base y altura del triangulo rectángulo
+-- calcular e imprimir (print) el perímetro del triangulo
+-- calcular e imprimir (print) el área (superficie) del triangulo
+*/
+
+base=parseInt(input("Ingrese la base del triángulo:"))
+altura=parseInt(input("Ingrese la altura del triángulo:"))
+perimetro=base+altura+Math.hypot(base,altura)
+superficie=base*altura/2
+print("Perímetro: "+perimetro.toFixed(2))
+print("Superficie: "+superficie)
+
+</script>
